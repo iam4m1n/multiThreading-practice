@@ -12,7 +12,11 @@ public class Counter extends Thread {
     public void run(){
 
         for (int i = 0; i < 1000; i++) {
-            Main.counter++;
+
+            synchronized (this) {
+
+                Main.counter++;
+            }
 //            System.out.println(number + " -> " + ++Main.counter);
         }
 

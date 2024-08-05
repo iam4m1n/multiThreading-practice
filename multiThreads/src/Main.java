@@ -11,15 +11,13 @@ public class Main {
 
 
 
-            // we wait for last thread to close, and we make a little bit of sleep to make sure are the threads are closed before the print the Counter.
-            if (i==9) {
+
                 try {
                     t.join();
-                    sleep(1000);
                 } catch (InterruptedException e) {
                     System.out.println("catch an error!");
                 }
-            }
+
 
 
 
